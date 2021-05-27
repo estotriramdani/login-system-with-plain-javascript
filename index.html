@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="alert">
+      <div class="messageNotif"></div>
+      <small>Closed in <span class="closedNotif">3 seconds</span></small>
+    </div>
+    <div class="login-form">
+      <div class="form loginAccount" style="transform: translateY(-100%)">
+        <h1>Login</h1>
+        <div class="input-text">
+          <i class="bi bi-at"></i>
+          <label for="Username" class="label">Username</label>
+          <input type="text" class="input" />
+        </div>
+        <div class="input-text">
+          <i class="bi bi-key"></i>
+          <label for="Password" class="label">Password</label>
+          <input type="password" class="input" />
+        </div>
+        <button class="btn">Login</button>
+        <a href="#" class="cta swipeToRegister">Create account?</a>
+      </div>
+      <!-- register -->
+      <div class="form registerAccount" style="transform: translateY(-105%)">
+        <h1>Register</h1>
+        <div class="input-text">
+          <i class="bi bi-at"></i>
+          <label for="Username" class="label">Username</label>
+          <input type="text" id="usernameRegister" class="input" />
+        </div>
+        <div class="input-text">
+          <i class="bi bi-key"></i>
+          <label for="Password" class="label">Password</label>
+          <input type="password" id="passwordRegister" class="input" />
+        </div>
+        <div class="input-text">
+          <i class="bi bi-key"></i>
+          <label for="Password" class="label">Repeat Password</label>
+          <input type="password" id="passwordRegisterVerify" class="input" />
+        </div>
+        <button class="btn" id="register">Register</button>
+        <a href="#" class="cta swipeToLogin">Have an Account?</a>
+      </div>
+    </div>
+
+    <script src="script/index.js" type="module"></script>
+  </body>
+</html>
