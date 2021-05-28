@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style/index.css" />
     <title>Login Form</title>
   </head>
   <body>
@@ -13,38 +13,46 @@
       <small>Closed in <span class="closedNotif">3 seconds</span></small>
     </div>
     <div class="login-form">
-      <div class="form loginAccount" style="transform: translateY(-100%)">
+      <div class="form loginAccount">
         <h1>Login</h1>
         <div class="input-text">
           <i class="bi bi-at"></i>
           <label for="Username" class="label">Username</label>
-          <input type="text" class="input" />
+          <input type="text" class="input loginForm" id="usernameLogin" />
         </div>
         <div class="input-text">
           <i class="bi bi-key"></i>
           <label for="Password" class="label">Password</label>
-          <input type="password" class="input" />
+          <input type="password" class="input loginForm" id="passwordLogin" />
         </div>
-        <button class="btn">Login</button>
+        <button class="btn" id="login">Login</button>
         <a href="#" class="cta swipeToRegister">Create account?</a>
       </div>
       <!-- register -->
-      <div class="form registerAccount" style="transform: translateY(-105%)">
+      <div class="form registerAccount">
         <h1>Register</h1>
         <div class="input-text">
           <i class="bi bi-at"></i>
           <label for="Username" class="label">Username</label>
-          <input type="text" id="usernameRegister" class="input" />
+          <input type="text" id="usernameRegister" class="input registerForm" />
         </div>
         <div class="input-text">
           <i class="bi bi-key"></i>
           <label for="Password" class="label">Password</label>
-          <input type="password" id="passwordRegister" class="input" />
+          <input
+            type="password"
+            id="passwordRegister"
+            class="input registerForm"
+          />
         </div>
         <div class="input-text">
           <i class="bi bi-key"></i>
           <label for="Password" class="label">Repeat Password</label>
-          <input type="password" id="passwordRegisterVerify" class="input" />
+          <input
+            type="password"
+            id="passwordRegisterVerify"
+            class="input registerForm"
+          />
         </div>
         <button class="btn" id="register">Register</button>
         <a href="#" class="cta swipeToLogin">Have an Account?</a>

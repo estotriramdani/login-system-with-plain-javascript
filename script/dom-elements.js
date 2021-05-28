@@ -18,6 +18,13 @@ const passwordRegisterVerify = document.querySelector(
 );
 const registerButton = document.querySelector('#register');
 
+const loginButton = document.querySelector('#login');
+const usernameLogin = document.querySelector('#usernameLogin');
+const passwordLogin = document.querySelector('#passwordLogin');
+
+const loginForm = document.getElementsByClassName('loginForm');
+const registerForm = document.getElementsByClassName('registerForm');
+
 export {
   label,
   input,
@@ -34,4 +41,9 @@ export {
   closeNotif,
   closedNotif,
   registerButton,
+  loginButton,
+  usernameLogin,
+  passwordLogin,
+  loginForm,
+  registerForm,
 };
