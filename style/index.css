@@ -161,7 +161,7 @@ body {
 
 .disabled-button {
   color: #2c3e50 !important;
-  background: #7f8c8d !important;
+  background: #bdc3c7 !important;
 }
 
 .messageNotif {
@@ -178,4 +178,162 @@ body {
 
 .showNotif {
   transform: translateX(0);
+}
+
+/* Style for home page */
+.home {
+  width: 330px;
+  height: 420px;
+  background-color: #ecf0f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 40px;
+}
+
+.home .heading {
+  margin-bottom: 50px;
+  color: #3498db;
+}
+
+.heading h2,
+.heading h4 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  position: relative;
+}
+.heading h2::after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.heading h4 {
+  margin-bottom: 10px;
+}
+
+.quotes {
+  color: #3498db;
+}
+
+.quotes p {
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 15px;
+}
+
+.quotes small {
+  display: block;
+  margin-bottom: 50px;
+}
+
+/* skeleton */
+
+.h4-skeleton::before,
+.h2-skeleton::before,
+.p-skeleton::before,
+.small-skeleton::before,
+.btn-skeleton::before {
+  background-color: #bdc3c7;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  /* animation: splash 2s ease 0s infinite; */
+  animation: run 1.5s ease-in-out 0s infinite;
+}
+
+.h4-skeleton,
+.h2-skeleton,
+.p-skeleton,
+.small-skeleton,
+.btn-skeleton {
+  background-color: #95a5a6;
+  border-radius: 3px;
+  animation: splash 2s ease 0s infinite;
+}
+
+.h4-skeleton {
+  width: 100px;
+  height: 25px;
+  position: relative;
+}
+
+.h2-skeleton {
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+.h2-skeleton::after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  background-color: #bdc3c7 !important;
+  z-index: 10;
+}
+
+.p-skeleton {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.small-skeleton {
+  position: relative;
+  width: 50%;
+  height: 20px;
+}
+
+.btn-skeleton {
+  position: relative;
+  height: 40px;
+  width: 100%;
+}
+
+@keyframes splash {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes run {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  34% {
+    width: 0%;
+    height: 100%;
+  }
+  66% {
+    width: 100%;
+    height: 100%;
+  }
 }
