@@ -140,12 +140,12 @@ body {
 .alert {
   position: fixed;
   font-size: 0.8em;
-  top: 30px;
-  right: 50px;
+  top: 60px;
+  right: 100px;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  transform: translateX(150%);
+  transform: translateX(200%);
   transition: 0.3s;
 }
 

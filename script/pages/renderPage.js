@@ -6,12 +6,12 @@ contentPage.innerHTML = `<div class="login-form authPage" style="display: none;"
   <div class="input-text">
     <i class="bi bi-at"></i>
     <label for="Username" class="label">Username</label>
-    <input type="text" class="input loginForm" id="usernameLogin" />
+    <input autocomplete="off" type="text" class="input loginForm" id="usernameLogin" />
   </div>
   <div class="input-text">
     <i class="bi bi-key"></i>
     <label for="Password" class="label">Password</label>
-    <input type="password" class="input loginForm" id="passwordLogin" />
+    <input autocomplete="off" type="password" class="input loginForm" id="passwordLogin" />
   </div>
   <button class="btn" id="login">Login</button>
   <a href="#" class="cta swipeToRegister">Create account?</a>
@@ -23,6 +23,7 @@ contentPage.innerHTML = `<div class="login-form authPage" style="display: none;"
     <i class="bi bi-at"></i>
     <label for="Username" class="label">Username</label>
     <input
+    autocomplete="off"
       type="text"
       id="usernameRegister"
       class="input registerForm"
@@ -31,7 +32,8 @@ contentPage.innerHTML = `<div class="login-form authPage" style="display: none;"
   <div class="input-text">
     <i class="bi bi-key"></i>
     <label for="Password" class="label">Password</label>
-    <input
+    <input 
+      autocomplete="off"
       type="password"
       id="passwordRegister"
       class="input registerForm"
@@ -40,7 +42,8 @@ contentPage.innerHTML = `<div class="login-form authPage" style="display: none;"
   <div class="input-text">
     <i class="bi bi-key"></i>
     <label for="Password" class="label">Repeat Password</label>
-    <input
+    <input 
+      autocomplete="off"
       type="password"
       id="passwordRegisterVerify"
       class="input registerForm"
