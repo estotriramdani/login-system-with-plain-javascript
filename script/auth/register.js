@@ -61,7 +61,16 @@ const register = () => {
     const searchData = usersData.filter(function (user) {
       return user.username == usernameRegisterInput;
     });
-    if (searchData.length == 0) {
+    if (searchData.length > 0) {
+      setTimeout(() => {
+        showNotification('failed');
+        messageNotif.innerHTML = 'Username is already registered!';
+      }, 1500);
+      setTimeout(() => {
+        closeNotification('failed');
+        registerButton.innerHTML = 'Register';
+      }, 3500);
+    } else {
       usersData.push({
         username: usernameRegisterInput,
         password: passwordRegisterInput,
@@ -77,15 +86,6 @@ const register = () => {
       }, 1500);
       setTimeout(() => {
         closeNotification('success');
-      }, 3500);
-    } else {
-      setTimeout(() => {
-        showNotification('failed');
-        messageNotif.innerHTML = 'Username is already registered!';
-      }, 1500);
-      setTimeout(() => {
-        closeNotification('failed');
-        registerButton.innerHTML = 'Register';
       }, 3500);
     }
   } else {

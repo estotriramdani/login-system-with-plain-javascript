@@ -1,4 +1,4 @@
-const quotes = [
+const quotesData = [
   {
     quotes:
       'Genius is one percent inspiration and ninety-nine percent perspiration.',
@@ -48,4 +48,4 @@ const quotes = [
   },
 ];
 
-export default quotes;
+export default quotesData;

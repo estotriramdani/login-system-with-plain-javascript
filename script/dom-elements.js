@@ -1,6 +1,7 @@
 const label = document.querySelectorAll('.label');
 const input = document.querySelectorAll('.input');
 const btn = document.querySelector('.btn');
+const content = document.querySelector('.content');
 const swipeToRegister = document.querySelector('.swipeToRegister');
 const swipeToLogin = document.querySelector('.swipeToLogin');
 
@@ -24,6 +25,17 @@ const passwordLogin = document.querySelector('#passwordLogin');
 
 const loginForm = document.getElementsByClassName('loginForm');
 const registerForm = document.getElementsByClassName('registerForm');
+const logoutButton = document.querySelector('#logout');
+
+const authPage = document.querySelector('.authPage');
+const homePage = document.querySelector('.homePage');
+const homePageSkeleton = document.querySelector('.homePageSkeleton');
+
+const inputElements = document.getElementsByTagName('input');
+
+const userLoggedin = document.querySelector('#userLoggedIn');
+const quotes = document.querySelector('#quotes');
+const authorQuotes = document.querySelector('#authorQuotes');
 
 export {
   label,
@@ -46,4 +58,13 @@ export {
   passwordLogin,
   loginForm,
   registerForm,
+  content,
+  authPage,
+  homePage,
+  homePageSkeleton,
+  logoutButton,
+  inputElements,
+  userLoggedin,
+  quotes,
+  authorQuotes,
 };

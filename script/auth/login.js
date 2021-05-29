@@ -1,3 +1,4 @@
+import getQuotes from '../data/getQuotes.js';
 import {
   alertNotif,
   loginButton,
@@ -5,7 +6,13 @@ import {
   messageNotif,
   passwordLogin,
   usernameLogin,
+  content,
+  authPage,
+  homePage,
+  homePageSkeleton,
+  userLoggedin,
 } from '../dom-elements.js';
+import { homeSkeleton } from '../pages/home.js';
 import {
   closeNotification,
   showNotification,
@@ -49,8 +56,17 @@ const login = () => {
         messageNotif.innerHTML = 'Login success!';
       }, 1000);
       setTimeout(() => {
+        authPage.style.display = 'none';
+        homePageSkeleton.style.display = 'block';
+        getQuotes();
+      }, 2000);
+      setTimeout(() => {
         loginButton.innerHTML = 'Login';
+        homePage.style.display = 'block';
+        homePageSkeleton.style.display = 'none';
         closeNotification('success');
+        usernameLogin.value = '';
+        passwordLogin.value = '';
       }, 3000);
     } else {
       setTimeout(() => {

@@ -1,5 +1,7 @@
 import login from './auth/login.js';
+import logout from './auth/logout.js';
 import register from './auth/register.js';
+import getQuotes from './data/getQuotes.js';
 import {
   input,
   loginAccount,
@@ -9,6 +11,11 @@ import {
   label,
   registerButton,
   loginButton,
+  homePageSkeleton,
+  authPage,
+  homePage,
+  logoutButton,
+  passwordRegisterVerify,
 } from './dom-elements.js';
 
 if (window.localStorage.getItem('users') === null) {
@@ -16,6 +23,20 @@ if (window.localStorage.getItem('users') === null) {
     'users',
     '[{"username": "Esto", "password": "qwe123"}]'
   );
+}
+
+if (
+  window.sessionStorage.getItem('userLoggedIn') != null &&
+  window.sessionStorage.getItem('userLoggedIn') != 'loggedOut'
+) {
+  authPage.style.display = 'none';
+  homePageSkeleton.style.display = 'block';
+  setTimeout(() => {
+    homePageSkeleton.style.display = 'none';
+    homePage.style.display = 'block';
+  }, 1500);
+} else {
+  authPage.style.display = 'block';
 }
 
 for (let index = 0; index < input.length; index++) {
@@ -41,10 +62,16 @@ swipeToLogin.addEventListener('click', () => {
   registerAccount.style.transform = 'translateY(0%)';
 });
 
+registerButton.addEventListener('click', () => {
+  register();
+});
+
 loginButton.addEventListener('click', () => {
   login();
 });
 
-registerButton.addEventListener('click', () => {
-  register();
+logoutButton.addEventListener('click', () => {
+  logout();
 });
+
+getQuotes();
