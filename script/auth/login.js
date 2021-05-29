@@ -28,11 +28,11 @@ passwordLogin.addEventListener('change', (e) => {
   passwordLoginInput = e.target.value;
 });
 
-for (let index = 0; index < loginForm.length; index++) {
-  loginForm[index].addEventListener('keyup', (e) => {
-    if (e.key === 'Enter') login();
-  });
-}
+// for (let index = 0; index < loginForm.length; index++) {
+//   loginForm[index].addEventListener('keyup', (e) => {
+//     if (e.key === 'Enter') login();
+//   });
+// }
 
 const login = () => {
   if (usernameLogin.value.length <= 0 || passwordLogin.value.length <= 0) {

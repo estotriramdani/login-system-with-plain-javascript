@@ -30,15 +30,15 @@ passwordRegisterVerify.addEventListener('change', (e) => {
   passwordRegisterVerifyInput = e.target.value;
 });
 
-passwordRegisterVerify.addEventListener('keyup', (e) => {
-  if (e.key === 'Enter') register();
-});
+// passwordRegisterVerify.addEventListener('keyup', (e) => {
+//   if (e.key === 'Enter') register();
+// });
 
-for (let index = 0; index < registerForm.length; index++) {
-  registerForm[index].addEventListener('keyup', (e) => {
-    if (e.key === 'Enter') register();
-  });
-}
+// for (let index = 0; index < registerForm.length; index++) {
+//   registerForm[index].addEventListener('keyup', (e) => {
+//     if (e.key === 'Enter') register();
+//   });
+// }
 
 const register = () => {
   if (
